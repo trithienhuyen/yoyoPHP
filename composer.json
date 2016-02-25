@@ -1,0 +1,21 @@
+{
+    "name": "thework/aynfwork",
+    "description": "PHP Framework for NormalApp and API",
+    "authors": [
+        {
+            "name": "Thien Huyen",
+            "email": "trithienhuyen@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/console": "2.6.7",
+        "vlucas/spot2":"*"
+    },
+    "autoload": {
+        "classmap":["core/commands"],
+        "psr-4": {
+            "App\\": "app/",
+            "Core\\":"core"
+        }
+    }
+}

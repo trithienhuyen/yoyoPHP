@@ -1,0 +1,16 @@
+#!/usr/bin/env php
+<?php
+//Load Bootstrap File
+require '/boostrap.php';
+//Load Composer Autoload
+if (file_exists(__DIR__ . '/vendor/autoload.php')) {
+    require __DIR__ . '/vendor/autoload.php';
+}
+//Require Namespace
+use Symfony\Component\Console\Application;
+$application = new Application();
+# Add Commands
+$application->add(new ControllerCommand());
+$application->add(new MigrationCommand());
+$application->run();
+
